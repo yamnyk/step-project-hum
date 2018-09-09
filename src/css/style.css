@@ -200,7 +200,7 @@ h2:after {
     margin-top: 60px;
 }
 
-.imazing-menu ul li a{
+.imazing-menu ul li{
     border: 1px solid gainsboro;
     padding: 18px 24px;
     font-size: 14px;
@@ -208,11 +208,12 @@ h2:after {
     color: #717171;
     background-color: #fff;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.imazing-menu ul li a:hover{
+.imazing-menu ul li:hover{
     color: #18cfab;
-    border-top: 2px solid #18cfab;
+    border-top: 1px solid #18cfab;
 }
 
 .imazing-menu ul li:nth-of-type(n+5){
