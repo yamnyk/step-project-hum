@@ -1,0 +1,345 @@
+body {
+    width: 1200px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+}
+
+.nikita {
+    height: 500px;
+    background-color: #d4d4d4;
+}
+.head-container {
+    height: 800px;
+    background-image: url("../img/Sections background/section-1(header).jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 64px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+h2 {
+    color:  #4e4e4e;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+h2:after {
+    content: '';
+    display: block;
+    width: 78px;
+    height: 1px;
+    background-color: #18cfab;
+    margin: 30px auto;
+    box-shadow: 10px 4px 1px 0px #18cfab;
+}
+
+.header {
+    background-color:  rgba(73, 71, 63, 0.6);
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.navbar li {
+    margin-left: 20px;
+    height: 90px;
+    line-height: 90px;
+}
+
+.navbar li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color:  #d4d4d4;
+    font-size: 11px;
+    font-weight: 300;
+    height: 90px;
+    display: inline-block;
+}
+
+.navbar li a:hover {
+    border-bottom: 3px solid #18cfab;
+    color: #18cfab;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.logo .icon {
+    display: inline-block;
+    background-image: url("../img/polygon1.png");
+    width: 58px;
+    height: 67px;
+    text-align: center;
+    line-height: 67px;
+    font-size: 40px;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.logo .green-ham {
+    color: #18cfab;
+    font-weight: 700;
+}
+
+.logo a:hover {
+    color: #d4d4d4;
+}
+
+.head-text-block {
+    text-align: center;
+    margin: 190px 0;
+}
+
+.wordpress-them {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.green {
+    color: #18cfab;
+}
+
+.just-buy {
+    color:  #d4d4d4;
+    font-size: 28px;
+}
+
+.head-text-block button{
+    border: none;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    width: 150px;
+    padding: 18px 0;
+    border-radius: 3px;
+    box-shadow: 0px -4px 0px 0px #ffffff;
+    text-transform: uppercase;
+}
+
+.buttons {
+    margin-top: 120px;
+}
+
+.green-button {
+    margin-right: 28px;
+    background-color: #18cfab;
+}
+
+.blue-button {
+    background-color: #00cbf6;
+}
+
+.four-icons {
+    display: flex;
+}
+
+.four-icons .icon-block {
+    width: 300px;
+    background-color: #1c2a33;
+    border-top: 5px solid #18cfab;
+    color: #18cfab;
+    font-size: 18px;
+    height: 300px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.four-icons .icon-block:nth-of-type(2n) {
+    background-color: #18cfab;
+    border-top: 5px solid #fff;
+    color: #fff;
+}
+
+.four-icons .image-icons {
+    height: 97px;
+    line-height: 97px;
+    margin: 70px 0 40px 0;
+}
+
+.our-imazing-work {
+    background-color: rgb(248, 252, 254);
+    text-align: center;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imazing-menu {
+    display: flex;
+}
+
+.imazing-menu ul {
+    display: flex;
+    list-style: none;
+    margin-top: 60px;
+}
+
+.imazing-menu ul li a{
+    border: 1px solid gainsboro;
+    padding: 18px 24px;
+    font-size: 14px;
+    border-right: none;
+    color: #717171;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+.imazing-menu ul li a:hover{
+    color: #18cfab;
+    border-top: 2px solid #18cfab;
+}
+
+.imazing-menu ul li:nth-of-type(n+5){
+    border-right: 1px solid gainsboro;
+}
+
+.imazing-photos .creative-design {
+    width: 284px;
+    height: 206px;
+}
+.imazing-photos {
+    width: 1136px;
+    height: 618px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.cicles span {
+    display: inline-block;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cicles .white-cicle {
+    background-image: url("../img/grenn-layer.png");
+    border: 1px solid #18cfab;
+    background-color: #fff;
+}
+
+.cicles .green-cicle {
+    background-image: url("../img/layer23.png");
+    background-color: #18cfab;
+}
+
+.creative-design .green-text {
+    color:  #18cfab;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 25px;
+}
+
+.creative-design p {
+    color:  #8a8a8a;
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.green-tot-border {
+    height: 3px;
+    background-color: #18cfab;
+}
+
+.cicles {
+    margin-top: 50px;
+}
+
+.load-more {
+    background-color: #18cfab;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    margin:60px 0 100px 0;
+    padding:20px 25px;
+    text-transform: uppercase;
+}
+
+.gallery-of-best-images {
+    background-color: rgb(248, 252, 254);
+    text-align: center;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-gallery-of-best-images {
+    width: 1136px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.best-photo {
+    width: 370px;
+    margin-bottom: 10px;
+}
+
+.two-photos {
+    height: 168px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.two-photos img {
+    display: inline-block;
+}
+
+.ninth-photos {
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer {
+    background-color:  #22353f;
+    height: 90px;
+    text-align: center;
+    color:  #aeaeae;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 90px;
+}
+
+.footer span {
+    color: #18cfab;
+}
+
+
+
