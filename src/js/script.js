@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    $('.photo-gallery-of-best-images').masonry({
-        // options
-        itemSelector: '.best-photo',
-        columnWidth: 10,
-        gutter: 10,
-        fitWidth: true,
-    });
+    masonryHiddenPhoto();
+    masonry();
+    butonClick('.imazing-photos');
+    masonryButton();
+    prokrutka();
+    imazinNavbarClick();
+})
 
     function photoList() {
         return $('.imazing-photos img');
@@ -25,41 +25,93 @@ $(document).ready(function () {
             }
     }
 
+    function imazinNavbarClick() {
+        $('.imazing-navbar li').click(function () {
+            $('.imazing-photos').css({'height': 'auto'});
+            showPhoto();
+            switch ($(this).text()) {
+                case 'Graphic Design':
+                    hidePhoto('graphic-foto')
+                    break;
+                case 'Web Design':
+                    hidePhoto('web-foto')
+                    break;
+                case 'Landing Pages':
+                    hidePhoto('landing-foto')
+                    break;
+                case 'Wordress':
+                    hidePhoto('wordpress-foto')
+                    break;
+            }
 
-    $('.imazing-navbar li').click(function () {
-        $('.imazing-photos').css({'height': 'auto'});
-        showPhoto();
-        switch ($(this).text()) {
-            case 'Graphic Design':
-            hidePhoto('graphic-foto')
-            break;
-            case 'Web Design':
-            hidePhoto('web-foto')
-            break;
-            case 'Landing Pages':
-            hidePhoto('landing-foto')
-            break;
-            case 'Wordress':
-            hidePhoto('wordpress-foto')
-            break;
-        }
+            $('.our-imazing-work .load-more').click(function () {
+                $('.imazing-photos').css({'height': `auto`, 'margin-bottom': '100px'});
+                $('.our-imazing-work .load-more').css('display', 'none')
+            })
+        })
+    }
+
+    function butonClick(selector) {
+        let count = 0;
+        let height = $(selector).height();
 
         $('.our-imazing-work .load-more').click(function () {
-          $('.imazing-photos').css({'height': `auto`, 'margin-bottom': '100px'});
-          $('.our-imazing-work .load-more').css('display', 'none')
+            if (photoList().length >= 24 + count*12) {
+                $(selector).css({'height': `${height + height*(count+1)}`});
+            } else {
+                $(selector).css({'height': `auto`});
+            }
+            count++;
+            if (count == 2) {
+                $(this).css('display', 'none')
+                $('.our-imazing-work').css({'margin-bottom': '100px'})
+            }
         })
+
+    }
+
+    function prokrutka() {
+        $('.navbar li a').click(function (e) {
+            e.preventDefault();
+            let id = $(this).attr('href');
+            let pos = $(id).offset().top;
+            $('html, body').animate({scrollTop: pos}, 1500)
+        })
+    }
+
+
+    function masonry() {
+    $('.photo-gallery-of-best-images').imagesLoaded(function () {
+        $('.photo-gallery-of-best-images').masonry({
+            itemSelector: '.best-photo',
+            columnWidth: 10,
+            gutter: 10,
+            fitWidth: true,
+        });
     })
 
-    $('.our-imazing-work .load-more').click(function () {
-        let height = $('.imazing-photos').height()*2;
-        if (photoList().length >= 24) {
-            $('.imazing-photos').css({'height': `${height}`, 'margin-bottom': '100px'});
-        } else {
-            $('.imazing-photos').css({'height': `auto`, 'margin-bottom': '100px'});
+    }
+
+    function masonryHiddenPhoto() {
+        let selector = $('.photo-gallery-of-best-images div');
+
+        for (let i = 9; i < selector.length; i++) {
+            $(selector[i]).addClass('hidden-photo');
         }
+    }
 
-        $('.our-imazing-work .load-more').css('display', 'none')
+function masonryShowPhoto() {
+    let selector = $('.photo-gallery-of-best-images div');
+    for (let i = 0; i < selector.length; i++) {
+        $(selector[i]).removeClass('hidden-photo')
+    }
+}
+
+function masonryButton() {
+    $('.gallery-of-best-images .load-more').click(function () {
+        masonryShowPhoto();
+        masonry();
+        $('.gallery-of-best-images .load-more').hide()
     })
-})
-
+}
 

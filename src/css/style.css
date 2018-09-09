@@ -1,4 +1,4 @@
-body {
+.container {
     width: 1200px;
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
@@ -23,7 +23,7 @@ h1 {
     margin: 20px 0;
 }
 
-h2 {
+.section-head-standart {
     color:  #4e4e4e;
     font-size: 30px;
     font-weight: 400;
@@ -36,7 +36,7 @@ h2:after {
     height: 1px;
     background-color: #18cfab;
     margin: 30px auto;
-    box-shadow: 10px 4px 1px 0px #18cfab;
+    box-shadow: 10px 4px 0px 0px #18cfab;
 }
 
 .header {
@@ -129,7 +129,7 @@ h2:after {
     font-size: 28px;
 }
 
-.head-text-block button{
+.ham-button{
     border: none;
     font-size: 13px;
     font-weight: 700;
@@ -340,6 +340,10 @@ h2:after {
 
 .footer span {
     color: #18cfab;
+}
+
+.hidden-photo {
+    display: none;
 }
 
 
