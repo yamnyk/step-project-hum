@@ -66,7 +66,7 @@
                 }
                 count++;
                 if (count == 2) {
-                    $('.button-container .load-more').css('display', 'none')
+                    $('#imazing-photo-button').css('display', 'none')
                     $('.imazing-photos').css({'margin-bottom': '100px'})
                 }
             }, 2000)
@@ -86,6 +86,7 @@
     $('.photo-gallery-of-best-images').imagesLoaded(function () {
         $('.photo-gallery-of-best-images').masonry({
             itemSelector: '.best-photo',
+            columnWidth: 370,
             gutter: 10,
             fitWidth: true,
         });

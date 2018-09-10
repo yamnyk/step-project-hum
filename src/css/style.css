@@ -1,7 +1,11 @@
-.container {
-    width: 1200px;
+body {
     font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 1160px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .nikita {
@@ -9,15 +13,19 @@
     background-color: #d4d4d4;
 }
 .head-container {
-    height: 800px;
+    height: 100vh;
     background-image: url("../img/Sections background/section-1(header).jpg");
     background-size: cover;
     background-attachment: fixed;
 }
 
+.head-nav-container {
+
+}
+
 h1 {
     font-weight: 700;
-    font-size: 64px;
+    font-size: 79px;
     color: #ffffff;
     text-transform: uppercase;
     margin: 20px 0;
@@ -29,33 +37,37 @@ h1 {
     font-weight: 400;
 }
 
-h2:after {
+.section-head-standart::after {
     content: '';
     display: block;
     width: 78px;
     height: 1px;
     background-color: #18cfab;
-    margin: 30px auto;
+    margin: 30px auto 70px;
     box-shadow: 10px 4px 0px 0px #18cfab;
 }
 
 .header {
     background-color:  rgba(73, 71, 63, 0.6);
-    height: 90px;
+
+}
+
+.head-nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 100px;
+    height: 100px;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     list-style: none;
+    width: 644px;
+    margin-left: 270px;
 }
 
 .navbar li {
-    margin-left: 20px;
     height: 90px;
     line-height: 90px;
 }
@@ -64,7 +76,7 @@ h2:after {
     text-transform: uppercase;
     text-decoration: none;
     color:  #d4d4d4;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 300;
     height: 90px;
     display: inline-block;
@@ -110,11 +122,11 @@ h2:after {
 
 .head-text-block {
     text-align: center;
-    margin: 190px 0;
+    margin-top: 150px;
 }
 
 .wordpress-them {
-    font-size: 30px;
+    font-size: 35px;
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
@@ -126,7 +138,7 @@ h2:after {
 
 .just-buy {
     color:  #d4d4d4;
-    font-size: 28px;
+    font-size: 34px;
 }
 
 .ham-button{
@@ -159,7 +171,7 @@ h2:after {
 }
 
 .four-icons .icon-block {
-    width: 300px;
+    width: 25%;
     background-color: #1c2a33;
     border-top: 5px solid #18cfab;
     color: #18cfab;
@@ -192,12 +204,12 @@ h2:after {
 
 .imazing-menu {
     display: flex;
+    justify-content: center;
 }
 
 .imazing-menu ul {
     display: flex;
     list-style: none;
-    margin-top: 60px;
 }
 
 .imazing-menu ul li{
@@ -229,8 +241,13 @@ h2:after {
     height: 618px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     overflow: hidden;
-    margin-top: 70px;
+    margin: 70px auto 0;
+}
+
+.imazing-photos img{
+    display: block;
 }
 
 .cicles span {
@@ -303,7 +320,7 @@ h2:after {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 50px;
+    margin: 50px auto 0;
 }
 
 .best-photo {
