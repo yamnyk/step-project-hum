@@ -1,11 +1,11 @@
-$(document).ready(function () {
-    masonryHiddenPhoto();
-    masonry();
-    butonClick('.imazing-photos');
-    masonryButton();
-    prokrutka();
-    imazinNavbarClick();
-})
+    $(document).ready(function () {
+        masonryHiddenPhoto();
+        masonry();
+        butonClick();
+        masonryButton();
+        navbarScroll();
+        imazinNavbarClick();
+    })
 
     function photoList() {
         return $('.imazing-photos img');
@@ -51,26 +51,29 @@ $(document).ready(function () {
         })
     }
 
-    function butonClick(selector) {
+    function butonClick() {
         let count = 0;
-        let height = $(selector).height();
+        let height = $('.imazing-photos').height();
 
-        $('.our-imazing-work .load-more').click(function () {
-            if (photoList().length >= 24 + count*12) {
-                $(selector).css({'height': `${height + height*(count+1)}`});
-            } else {
-                $(selector).css({'height': `auto`});
-            }
-            count++;
-            if (count == 2) {
-                $(this).css('display', 'none')
-                $('.our-imazing-work').css({'margin-bottom': '100px'})
-            }
+        $('#imazing-photo-button').click(function () {
+            loadAnimation('#imazing-photo-button');
+            setTimeout(function () {
+                stopAnimation('#imazing-photo-button');
+                if (photoList().length >= 24 + count*12) {
+                    $('.imazing-photos').css({'height': `${height + height*(count+1)}`});
+                } else {
+                    $('.imazing-photos').css({'height': `auto`});
+                }
+                count++;
+                if (count == 2) {
+                    $('.button-container .load-more').css('display', 'none')
+                    $('.imazing-photos').css({'margin-bottom': '100px'})
+                }
+            }, 2000)
         })
-
     }
 
-    function prokrutka() {
+    function navbarScroll() {
         $('.navbar li a').click(function (e) {
             e.preventDefault();
             let id = $(this).attr('href');
@@ -79,17 +82,14 @@ $(document).ready(function () {
         })
     }
 
-
     function masonry() {
     $('.photo-gallery-of-best-images').imagesLoaded(function () {
         $('.photo-gallery-of-best-images').masonry({
             itemSelector: '.best-photo',
-            columnWidth: 10,
             gutter: 10,
             fitWidth: true,
         });
     })
-
     }
 
     function masonryHiddenPhoto() {
@@ -100,18 +100,32 @@ $(document).ready(function () {
         }
     }
 
-function masonryShowPhoto() {
-    let selector = $('.photo-gallery-of-best-images div');
-    for (let i = 0; i < selector.length; i++) {
-        $(selector[i]).removeClass('hidden-photo')
+    function masonryShowPhoto() {
+        let selector = $('.photo-gallery-of-best-images div');
+        for (let i = 0; i < selector.length; i++) {
+            $(selector[i]).removeClass('hidden-photo')
+        }
     }
-}
 
-function masonryButton() {
-    $('.gallery-of-best-images .load-more').click(function () {
-        masonryShowPhoto();
-        masonry();
-        $('.gallery-of-best-images .load-more').hide()
-    })
-}
+    function masonryButton() {
+        $('#best-images-button').click(function () {
+            loadAnimation('#best-images-button');
+            setTimeout(function () {
+                stopAnimation('#best-images-button');
+                masonryShowPhoto();
+                masonry();
+                $('.photo-gallery-of-best-images').css({'margin-bottom': '100px'})
+                $('.gallery-of-best-images .load-more').hide()
+            }, 2000)
+        })
+    }
 
+    function loadAnimation(button) {
+        $('.anime-container').css('display', 'block');
+        $(button).css('opacity', '100%');
+    }
+
+    function stopAnimation(button) {
+        $('.anime-container').css('display', 'none');
+        $(button).css('display', 'inline-block');
+    }
