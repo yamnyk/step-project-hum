@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<section class="head-container">
-
-        <div class="header">
-            <div class="container head-nav-container">
-            <div class="logo"><a href=""><span class="icon">H</span>the<span class="green-ham">Ham</span></a></div>
-            <div class="menu">
-                <ul class="navbar">
+<section class="navbar">
+        <div class="nav-background">
+            <div class="container head-navigation-container">
+            <div class="logo"><a href=""><span class="hexagon">H</span>the<span class="strong-green">Ham</span></a></div>
+            <div class="main-menu">
+                <ul class="navigation">
                     <li><a href="">home</a></li>
                     <li><a href="#about">about</a></li>
                     <li><a href="#skills">skills</a></li>
@@ -24,24 +23,30 @@
                     <li><a href="#team">team</a></li>
                     <li><a href="#footer">contact</a></li>
                 </ul>
+            <div class="search"><img src="img/Search%20icon.png" alt=""></div>
             </div>
-            <div class="loop"><img src="img/Search%20icon.png" alt=""></div>
             </div>
         </div>
-<section class="head-text-block">
+<div class="slogans-block">
         <div class="container">
-                <h2 class="wordpress-them">the ham is <span class="green">wordpress theme</span></h2>
-                <h1>we are creative</h1>
-                <h2 class="just-buy">Just Buy And Enjoy These Awesome Features</h2>
-                <div class="buttons"><button class="ham-button green-button">explore now</button><button class="ham-button blue-button">purchase now</button></div>
+                <h2 class="head-second-title">the ham is <span class="green">wordpress theme</span></h2>
+                <h1 class="main-title">we are creative</h1>
+                <h2 class="head-third-title">Just Buy And Enjoy These Awesome Features</h2>
+                <div class="registration">
+                    <a class="head-button green-button">explore now</a>
+                    <a class="head-button blue-button" href="">purchase now</a>
+                </div>
         </div>
+</div>
 </section>
-</section>
-<section id="about" class="four-icons">
-    <div class="icon-block"><p class="image-icons"><img src="img/form1.png" alt=""></p><p>different theme option</p></div>
-    <div class="icon-block"><p class="image-icons"><img src="img/form2.png" alt=""></p><p>fully customizable</p></div>
-    <div class="icon-block"><p class="image-icons"><img src="img/form3.png" alt=""></p><p>unlimited support</p></div>
-    <div class="icon-block"><p class="image-icons"><img src="img/form4.png" alt=""></p><p>responsive all device</p></div>
+<section id="about" class="servises">
+    <div class="icon-block">
+        <div class="image-icons"><img src="img/form1.png" alt=""></div>
+        <h3>different theme option</h3>
+    </div>
+    <div class="icon-block"><div class="image-icons"><img src="img/form2.png" alt=""></div><h3>fully customizable</h3></div>
+    <div class="icon-block"><div class="image-icons"><img src="img/form3.png" alt=""></div><h3>unlimited support</h3></div>
+    <div class="icon-block"><div class="image-icons"><img src="img/form4.png" alt=""></div><h3>responsive all device</h3></div>
 </section>
 <section id="skills" class="nikita"></section>
 <section id="service" class="our-imazing-work">
@@ -49,11 +54,11 @@
         <h2 class="section-head-standart">Our Amazing Work</h2>
         <div class="imazing-menu">
             <ul class="imazing-navbar">
-                <li>All</li>
-                <li>Graphic Design</li>
-                <li>Web Design</li>
-                <li>Landing Pages</li>
-                <li>Wordress</li>
+                <li><a class="filter first-filter-el active-link">All</a></li>
+                <li><a class="filter">Graphic Design</a></li>
+                <li><a class="filter">Web Design</a></li>
+                <li><a class="filter">Landing Pages</a></li>
+                <li><a class="filter">Wordress</a></li>
             </ul>
         </div>
         <div class="imazing-photos">
@@ -63,7 +68,7 @@
                     <span class="white-cicle"></span>
                     <span class="green-cicle"></span>
                 </div>
-                <p class="green-text">creative design</p>
+                <h3 class="green-text">creative design</h3>
                 <p>Web Design</p>
             </div>
             <img class="graphic-foto" src="img/graphic-design/graphic-design1.jpg" alt="">
@@ -130,7 +135,7 @@
                 <div class="item item-3"></div>
                 <div class="item item-4"></div>
             </div>
-            <button id="imazing-photo-button" class="load-more">+ &nbsp;&nbsp;&nbsp;&nbsp;load more</button>
+            <a id="imazing-photo-button" class="load-more">+ &nbsp;&nbsp;&nbsp;&nbsp;load more</a>
         </div>
     </div>
 </section>
@@ -185,7 +190,7 @@
                 <div class="item item-3"></div>
                 <div class="item item-4"></div>
             </div>
-            <button id="best-images-button" class="load-more">+ &nbsp;&nbsp;&nbsp;&nbsp;load more</button>
+            <a id="best-images-button" class="load-more">+ &nbsp;&nbsp;&nbsp;&nbsp;load more</a>
         </div>
     </div>
 </section>

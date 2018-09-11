@@ -74,7 +74,7 @@
     }
 
     function navbarScroll() {
-        $('.navbar li a').click(function (e) {
+        $('.navigation li a').click(function (e) {
             e.preventDefault();
             let id = $(this).attr('href');
             let pos = $(id).offset().top;

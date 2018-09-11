@@ -12,18 +12,13 @@ body {
     height: 500px;
     background-color: #d4d4d4;
 }
-.head-container {
-    height: 100vh;
+.navbar {
     background-image: url("../img/Sections background/section-1(header).jpg");
     background-size: cover;
     background-attachment: fixed;
 }
 
-.head-nav-container {
-
-}
-
-h1 {
+.main-title {
     font-weight: 700;
     font-size: 79px;
     color: #ffffff;
@@ -47,29 +42,28 @@ h1 {
     box-shadow: 10px 4px 0px 0px #18cfab;
 }
 
-.header {
+.nav-background {
     background-color:  rgba(73, 71, 63, 0.6);
-
 }
 
-.head-nav-container {
+.main-menu {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.head-navigation-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100px;
+    padding: 15px 0;
 }
 
-.navbar {
+.navigation {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 644px;
-    margin-left: 270px;
-}
-
-.navbar li {
-    height: 90px;
-    line-height: 90px;
+    margin-right: 10px;
 }
 
 .navbar li a {
@@ -78,12 +72,23 @@ h1 {
     color:  #d4d4d4;
     font-size: 13px;
     font-weight: 300;
-    height: 90px;
     display: inline-block;
+    position: relative;
+    margin: 0 10px;
 }
 
-.navbar li a:hover {
-    border-bottom: 3px solid #18cfab;
+
+.navbar li a:hover::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #18cfab;
+    position: absolute;
+    top: 54px;
+}
+
+.navbar li a:hover{
     color: #18cfab;
 }
 
@@ -99,7 +104,7 @@ h1 {
     text-decoration: none;
 }
 
-.logo .icon {
+.logo .hexagon {
     display: inline-block;
     background-image: url("../img/polygon1.png");
     width: 58px;
@@ -111,21 +116,16 @@ h1 {
     margin-right: 5px;
 }
 
-.logo .green-ham {
-    color: #18cfab;
-    font-weight: 700;
-}
-
 .logo a:hover {
     color: #d4d4d4;
 }
 
-.head-text-block {
+.slogans-block {
     text-align: center;
-    margin-top: 150px;
+    padding: 150px 0;
 }
 
-.wordpress-them {
+.head-second-title {
     font-size: 35px;
     color: #fff;
     font-weight: 700;
@@ -136,24 +136,30 @@ h1 {
     color: #18cfab;
 }
 
-.just-buy {
+.strong-green {
+    color: #18cfab;
+    font-weight: bold;
+}
+.head-third-title {
     color:  #d4d4d4;
     font-size: 34px;
 }
 
-.ham-button{
+.head-button {
     border: none;
     font-size: 13px;
     font-weight: 700;
     color: #fff;
     width: 150px;
-    padding: 18px 0;
+    padding: 18px 20px;
     border-radius: 3px;
     box-shadow: 0px -4px 0px 0px #ffffff;
     text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.buttons {
+.registration {
     margin-top: 120px;
 }
 
@@ -166,31 +172,34 @@ h1 {
     background-color: #00cbf6;
 }
 
-.four-icons {
+.servises {
     display: flex;
 }
 
-.four-icons .icon-block {
+.servises .icon-block {
     width: 25%;
     background-color: #1c2a33;
     border-top: 5px solid #18cfab;
     color: #18cfab;
     font-size: 18px;
-    height: 300px;
+    padding: 90px 0;
     text-align: center;
     text-transform: uppercase;
 }
 
-.four-icons .icon-block:nth-of-type(2n) {
+.servises .icon-block:nth-of-type(2n) {
     background-color: #18cfab;
     border-top: 5px solid #fff;
     color: #fff;
 }
 
-.four-icons .image-icons {
-    height: 97px;
-    line-height: 97px;
-    margin: 70px 0 40px 0;
+.servises .image-icons {
+    height: 100px;
+    line-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 48px;
 }
 
 .our-imazing-work {
@@ -212,24 +221,31 @@ h1 {
     list-style: none;
 }
 
-.imazing-menu ul li{
-    border: 1px solid gainsboro;
+.filter {
     padding: 18px 24px;
     font-size: 14px;
-    border-right: none;
-    color: #717171;
+    border-collapse: collapse;
     background-color: #fff;
     text-decoration: none;
     cursor: pointer;
+    color: #717171;
+    text-decoration: none;
+    border: 1px solid gainsboro;
+    border-left: none;
 }
 
-.imazing-menu ul li:hover{
+.first-filter-el{
+    border-left: 1px solid gainsboro;
+}
+
+.imazing-menu ul li a:hover{
     color: #18cfab;
     border-top: 1px solid #18cfab;
 }
 
-.imazing-menu ul li:nth-of-type(n+5){
-    border-right: 1px solid gainsboro;
+.active-link {
+    color: #18cfab;
+    border-top: 1px solid #18cfab;
 }
 
 .imazing-photos .creative-design {
@@ -304,6 +320,9 @@ h1 {
     margin:60px 0 100px 0;
     padding:20px 25px;
     text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .gallery-of-best-images {
