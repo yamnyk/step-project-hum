@@ -12,7 +12,8 @@ body {
     height: 500px;
     background-color: #d4d4d4;
 }
-.navbar {
+
+.head {
     background-image: url("../img/Sections background/section-1(header).jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -26,13 +27,13 @@ body {
     margin: 20px 0;
 }
 
-.section-head-standart {
+.section-title {
     color:  #4e4e4e;
     font-size: 30px;
     font-weight: 400;
 }
 
-.section-head-standart::after {
+.section-title::after {
     content: '';
     display: block;
     width: 78px;
@@ -42,23 +43,23 @@ body {
     box-shadow: 10px 4px 0px 0px #18cfab;
 }
 
-.nav-background {
+.head_navbar {
     background-color:  rgba(73, 71, 63, 0.6);
 }
 
-.main-menu {
+.navbar-container {
     display: flex;
     justify-content: right;
     align-items: center;
 }
-.head-navigation-container {
+.head_navbar_background {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 0;
 }
 
-.navigation {
+.navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -66,7 +67,7 @@ body {
     margin-right: 10px;
 }
 
-.navbar li a {
+.navbar_item_link {
     text-transform: uppercase;
     text-decoration: none;
     color:  #d4d4d4;
@@ -78,7 +79,7 @@ body {
 }
 
 
-.navbar li a:hover::after{
+.navbar_item_link:hover::after{
     content: '';
     display: block;
     width: 100%;
@@ -88,7 +89,7 @@ body {
     top: 54px;
 }
 
-.navbar li a:hover{
+.navbar_item_link:hover{
     color: #18cfab;
 }
 
@@ -97,14 +98,14 @@ body {
     align-items: center;
 }
 
-.logo a {
+.logo_link {
     color: #fff;
     font-size: 26px;
     font-weight: 400;
     text-decoration: none;
 }
 
-.logo .hexagon {
+.logo_hexagon {
     display: inline-block;
     background-image: url("../img/polygon1.png");
     width: 58px;
@@ -116,16 +117,16 @@ body {
     margin-right: 5px;
 }
 
-.logo a:hover {
+.logo_link:hover {
     color: #d4d4d4;
 }
 
-.slogans-block {
+.slogans {
     text-align: center;
     padding: 150px 0;
 }
 
-.head-second-title {
+.slogans_uptitle {
     font-size: 35px;
     color: #fff;
     font-weight: 700;
@@ -136,35 +137,38 @@ body {
     color: #18cfab;
 }
 
-.strong-green {
+.logo_strong-green {
     color: #18cfab;
     font-weight: bold;
 }
-.head-third-title {
+.slogans-undertitle {
     color:  #d4d4d4;
     font-size: 34px;
 }
 
-.head-button {
+.registration_button {
     border: none;
     font-size: 13px;
     font-weight: 700;
     color: #fff;
     width: 150px;
-    padding: 18px 20px;
+    padding: 18px 10px;
     border-radius: 3px;
     box-shadow: 0px -4px 0px 0px #ffffff;
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
+    flex-basis: 40%;
 }
 
 .registration {
-    margin-top: 120px;
+    width: 350px;
+    margin: 120px auto 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .green-button {
-    margin-right: 28px;
     background-color: #18cfab;
 }
 
@@ -176,7 +180,7 @@ body {
     display: flex;
 }
 
-.servises .icon-block {
+.servises .services_blocks {
     width: 25%;
     background-color: #1c2a33;
     border-top: 5px solid #18cfab;
@@ -187,13 +191,13 @@ body {
     text-transform: uppercase;
 }
 
-.servises .icon-block:nth-of-type(2n) {
+.servises .services_blocks:nth-of-type(2n) {
     background-color: #18cfab;
     border-top: 5px solid #fff;
     color: #fff;
 }
 
-.servises .image-icons {
+.servises .service_image {
     height: 100px;
     line-height: 100px;
     display: flex;
@@ -202,7 +206,7 @@ body {
     margin-bottom: 48px;
 }
 
-.our-imazing-work {
+.portfolio {
     background-color: rgb(248, 252, 254);
     text-align: center;
     padding-top: 80px;
@@ -211,17 +215,17 @@ body {
     align-items: center;
 }
 
-.imazing-menu {
+.portfolio_block {
     display: flex;
     justify-content: center;
 }
 
-.imazing-menu ul {
+.porfolio_navigation {
     display: flex;
     list-style: none;
 }
 
-.filter {
+.portfolio_filter {
     padding: 18px 24px;
     font-size: 14px;
     border-collapse: collapse;
@@ -234,25 +238,25 @@ body {
     border-left: none;
 }
 
-.first-filter-el{
+.first_portfolio_filter{
     border-left: 1px solid gainsboro;
 }
 
-.imazing-menu ul li a:hover{
+.portfolio_filter:hover{
     color: #18cfab;
     border-top: 1px solid #18cfab;
 }
 
-.active-link {
+.portfolio_active {
     color: #18cfab;
     border-top: 1px solid #18cfab;
 }
 
-.imazing-photos .creative-design {
+.portfolio_gallery .portfolio_category_name {
     width: 284px;
     height: 206px;
 }
-.imazing-photos {
+.portfolio_gallery {
     width: 1136px;
     height: 618px;
     display: flex;
@@ -262,7 +266,7 @@ body {
     margin: 70px auto 0;
 }
 
-.imazing-photos img{
+.portfolio_gallery img{
     display: block;
 }
 
@@ -286,7 +290,7 @@ body {
     background-color: #18cfab;
 }
 
-.creative-design .green-text {
+.portfolio_category_name .portfolio_category_title {
     color:  #18cfab;
     font-size: 14px;
     font-weight: 700;
@@ -294,14 +298,14 @@ body {
     margin-top: 25px;
 }
 
-.creative-design p {
+.portfolio_category_name p {
     color:  #8a8a8a;
     font-size: 12px;
     font-weight: 300;
     margin-top: 10px;
 }
 
-.green-tot-border {
+.green-top-border {
     height: 3px;
     background-color: #18cfab;
 }
@@ -325,7 +329,7 @@ body {
     cursor: pointer;
 }
 
-.gallery-of-best-images {
+.best-images {
     background-color: rgb(248, 252, 254);
     text-align: center;
     padding-top: 80px;
@@ -334,7 +338,7 @@ body {
     align-items: center;
 }
 
-.photo-gallery-of-best-images {
+.best_images_gallery {
     width: 1136px;
     display: flex;
     justify-content: space-around;
@@ -458,7 +462,7 @@ body {
     75% {transform: translate(0, -100px)}
 }
 
-.button-container {
+.gallery_bautton {
     width: 100%;
     position: relative;
 }
