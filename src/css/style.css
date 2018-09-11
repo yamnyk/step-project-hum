@@ -3,9 +3,13 @@ body {
 }
 
 .container {
-    width: 1200px;
+    width: 1160px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.center {
+    text-align: center;
 }
 
 .section-head-standart{
@@ -13,6 +17,7 @@ body {
     font-size: 30px;
     font-weight: 400;
     text-align: center;
+    padding-top: 45px;
 }
 
 .section-head-standart:after {
@@ -21,25 +26,311 @@ body {
     width: 78px;
     height: 1px;
     background-color: #18cfab;
-    margin: 30px auto;
+    margin: 30px auto 70px;
     box-shadow: 10px 4px 0 0 #18cfab;
 }
 
+.our-services-tabs{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
+.services-tab-link {
+    width: calc(1160px/6);
+    height: 70px;
+    color: #717171;
+    background-color: #f8fcfe;
+    border: 1px solid #ececec;
+    font-size: 16px;
+    position: relative;
+    transition: 100ms all ease-in-out;
+    outline: none;
+}
+
+.services-tab-link:hover {
+    background-color: #18cfab;
+    color: #fff;
+    transition: 273ms all ease-in-out;
+}
+
+.services-tab-active {
+    background-color: #18cfab;
+    color: #fff;
+}
+
+.services-tab-active:after {
+    position: absolute;
+    content: '';
+    border: 8px solid #18cfab;
+    bottom: -8px;
+    left: 45%;
+    transform: rotate(45deg);
+}
+
+.services-tab-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0 100px;
+}
+
+.services-img {
+    width: 200px;
+    height: 140px;
+}
+
+.services-text {
+    width: 935px;
+    color: #777777;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 25px;
+}
 
 .ham-button{
     border: none;
     font-size: 13px;
     font-weight: 700;
     color: #fff;
-    width: 150px;
-    padding: 18px 0;
+    padding: 18px 25px;
     border-radius: 3px;
-    box-shadow: 0px -4px 0px 0px #ffffff;
+    box-shadow: 0 -4px 0 0   #ffffff;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .green-button {
-    margin-right: 28px;
     background-color: #18cfab;
+}
+
+.lid-magnet {
+    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.8)), url('../img/Sections background/section-2.jpg') center fixed;
+    background-size: cover;
+    height: 470px;
+    position: relative;
+}
+
+.lid-magnet-head-green {
+    color: #18cfab;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 120px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.lid-magnet-description {
+    color: #d8d8d8;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.modal {
+    display: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(20,20,20,0.8);
+    display: none;
+}
+
+.overlay-open {
+    display: block;
+}
+
+.modal-win {
+    position: fixed;
+    z-index: 10000;
+    top: 50%;
+    left: 50%;
+    width: 820px;
+    height: 360px;
+    background-color: #fff;
+    border-radius: 10px;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal-form  {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 40px;
+}
+
+.form-head {
+    font-size: 22px;
+    font-weight: 400;
+    color: #474646;
+    margin-top: 45px;
+}
+
+.form-input {
+    position: relative;
+    width: 302px;
+    height: 15px;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #ececec;
+    color: #b6b6b6;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 15px;
+}
+
+/*TODO: need to solwe the appearance problem + create same element for password*/
+.form-input::after {
+    content: '';
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    right: 0;
+    background: url("../img/form/email.png");
+}
+
+.form-button {
+    width: 335px;
+    height: 47px;
+    background-color: #11d0ac;
+    color: #fff;
+    font-size: 21px;
+    padding: 0;
+    border: none;
+    border-radius: 3px;
+}
+
+.form-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 55px;
+}
+
+.social-networks {
+    width: 40%;
+}
+
+.text-dark {
+    color: #4e4e4e;
+}
+
+.breaking-news {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.breaking-news-item {
+    position: relative;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.breaking-news-img {
+    height: 200px;
+}
+
+.post-date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    content: '12 \A Feb';
+    white-space: pre;
+    line-height: 25px;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #203e38;
+    transition: 0.3s background-color ease-in-out;
+}
+
+.breaking-news-item:hover .post-date {
+    background-color: #18cfab;
+}
+
+.breaking-news-post {
+    height: 70px;
+    background-color: #f8fcfe;
+    border-left: 1px solid #edeeee;
+    border-right: 1px solid #edeeee;
+    border-bottom: 1px solid #edeeee;
+    text-decoration: none;
+    margin-bottom: 40px;
+}
+
+.post-name {
+    color: #717171;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px 15px 10px;
+    transition: 0.3s color ease-in-out;
+}
+
+.post-info {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 15px;
+}
+
+.breaking-news-item:hover .post-name{
+    color: #18cfab;
+    transition: 0.3s color ease-in-out;
+}
+
+.breaking-news-post span:last-child:before{
+    content: '|';
+    margin: 0 10px 0 -5px;
+}
+
+.what-they-say {
+    background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.8) ), url('../img/Sections background/section-3.jpg') center fixed;
+    background-size: cover;
+    height: 850px;
+    position: relative;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.what-they-say-opinion {
+    color: #bbb;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 40px 0;
+}
+
+.what-they-say-name {
+    text-transform: uppercase;
+    color: #18cfab;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.what-they-say-position {
+    color: #bbb;
+    font-size: 13px;
+    font-weight: 300;
 }
