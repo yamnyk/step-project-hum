@@ -115,7 +115,7 @@
                 masonryShowPhoto();
                 masonry();
                 $('.photo-gallery-of-best-images').css({'margin-bottom': '100px'})
-                $('.gallery-of-best-images .load-more').hide()
+                $('#best-images-button').hide()
             }, 2000)
         })
     }
