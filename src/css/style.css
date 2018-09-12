@@ -45,6 +45,7 @@ body {
 
 .head_navbar {
     background-color:  rgba(73, 71, 63, 0.6);
+    position: relative;
 }
 
 .navbar-container {
@@ -56,7 +57,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 0;
+    padding: 30px 0;
 }
 
 .navbar {
@@ -105,16 +106,46 @@ body {
     text-decoration: none;
 }
 
-.logo_hexagon {
-    display: inline-block;
-    background-image: url("../img/polygon1.png");
+.hexagon {
     width: 58px;
-    height: 67px;
+    height: 36px;
+    background: #18cfab;
+    color:#fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     text-align: center;
-    line-height: 67px;
+    line-height: 36px;
     font-size: 40px;
     font-weight: 700;
-    margin-right: 5px;
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+}
+
+.hexagon:before {
+    top: -15px;
+    border-left: 29px solid transparent;
+    border-right: 29px solid transparent;
+    border-bottom: 15px solid #18cfab;
+}
+.hexagon:after {
+    bottom: -15px;
+    border-left: 29px solid transparent;
+    border-right: 29px solid transparent;
+    border-top: 15px solid #18cfab;
+}
+
+.logo_name {
+    position: relative;
+    left: 75%;
+    display: block;
 }
 
 .logo_link:hover {
