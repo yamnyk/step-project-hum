@@ -5,6 +5,7 @@
     <title>THE HAM</title>
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -50,21 +51,39 @@
 </section>
 <div class="modal-overlay"></div>
 <div class="modal">
-    <form action="#" class="modal-form">
+    <form action="" class="modal-form">
         <h3 class="form-head">Order your theme now</h3>
         <input type="text" class="form-input input-email" placeholder="Your email">
         <input type="password" class="form-input input-password" placeholder="Your password">
         <button type="submit" class="form-button">Order now</button>
         <div class="form-footer">
-            <p class="form-footer-text">Remember Me</p>
+            <label class="form-checkbox">
+                <input type="checkbox" class="checkbox-input"/>
+                <span class="custom-checkbox"></span>
+                <span class="form-footer-text">Remember Me</span>
+            </label>
             <p class="form-footer-text">Forgot Password?</p>
         </div>
     </form>
+    <div class="modal-divider">
+        <hr class="modal-divider-line">
+        <p class="modal-divider-text">or</p>
+        <hr class="modal-divider-line">
+    </div>
     <div class="social-networks">
-        <h3 class="form-head green">Subscribe and get more options</h3>
-        <a href="" class="networks-fb"></a>
-        <a href="" class="networks-twitter"></a>
-        <a href="" class="networks-google"></a>
+        <h3 class="modal-second-title">Subscribe and get more options</h3>
+        <button class="networks-button bg-blue">
+            <div class="fb-icon"><i class="fa fa-facebook-f"></i></div>
+            <div class="networks-text">Sign In with Facebook</div>
+        </button>
+        <button class="networks-button bg-light-blue">
+            <div class="twitter-icon"><i class="fa fa-twitter"></i></div>
+            <div class="networks-text">Sign In with Twitter</div>
+        </button>
+        <button href="" class="networks-button bg-red">
+            <div class="google-icon"><i class="fa fa-google"></i></div>
+            <div class="networks-text">Sign In with Google+</div>
+        </button>
     </div>
 </div>
 <section class="lid-magnet">

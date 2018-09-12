@@ -18,3 +18,13 @@ $(".modal-overlay").click(function(e){
     $('.modal').removeClass('modal-win');
     $(".modal-overlay").removeClass('overlay-open');
 });
+$(".form-button").click(function(e){
+    // console.log($(e.target).hasClass('overlay'));
+    $('.modal').removeClass('modal-win');
+    $(".modal-overlay").removeClass('overlay-open');
+});
+$(".networks-button").click(function(e){
+    // console.log($(e.target).hasClass('overlay'));
+    $('.modal').removeClass('modal-win');
+    $(".modal-overlay").removeClass('overlay-open');
+});

@@ -160,16 +160,16 @@ body {
     transform: translate(-50%,-50%);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .modal-form  {
-    width: 40%;
+    width: 42.5%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 40px;
+    /*margin-left: 40px;*/
 }
 
 .form-head {
@@ -191,14 +191,148 @@ body {
     padding: 15px;
 }
 
-/*TODO: need to solwe the appearance problem + create same element for password*/
-.form-input::after {
-    content: '';
-    width: 23px;
-    height: 23px;
+.form-footer-text {
+    color: #b6b6b6;
+    font-size: 15px;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: center;
+}
+.form-checkbox .checkbox-input{
+    display: none;
+}
+.form-checkbox .checkbox-input:checked~.custom-checkbox:after {
+    transform: scale(1);
+}
+.custom-checkbox {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background-color: #dedede;
+}
+.custom-checkbox:after {
+    content: '\2713';
     position: absolute;
-    right: 0;
-    background: url("../img/form/email.png");
+    display: block;
+    color: green;
+    font-size: 20px;
+    bottom: -3px;
+    font-weight: 700;
+    transform: scale(0);
+    transition: 0.3s;
+}
+
+.modal-divider {
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.modal-divider-line {
+    border: 1px solid #18cfab;
+    height: 90px;
+    transform: rotate(180deg);
+}
+
+.modal-divider-text {
+    color: #919191;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.social-networks {
+    width: 42.5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.networks-button {
+    width: 310px;
+    height: 50px;
+    text-decoration: none;
+    border-radius: 3px;
+    border: none;
+    padding: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.networks-button:nth-of-type(3){
+    margin-bottom: 45px;
+}
+
+.bg-blue {
+    background-color: #385899;
+}
+
+.bg-light-blue {
+    background-color: #43b1e4;
+}
+
+.bg-red {
+    background-color: #df4b31;
+}
+
+.fb-icon {
+    width: 60px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    background-color: #324e89;
+    border-radius: 3px;
+}
+
+.twitter-icon {
+    width: 60px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    background-color: #3ea3d2;
+    border-radius: 3px;
+}
+
+.google-icon{
+    width: 60px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    background-color: #cf3c21;
+    border-radius: 3px;
+}
+
+.networks-text {
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.modal-second-title {
+    color: #18cfab;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.input-email {
+    background: url("../img/form/email.png") no-repeat 95% 50%;
+}
+
+.input-password {
+    background: url("../img/form/password.png") no-repeat 95% 50%;
 }
 
 .form-button {
@@ -219,9 +353,6 @@ body {
     margin-bottom: 55px;
 }
 
-.social-networks {
-    width: 40%;
-}
 
 .text-dark {
     color: #4e4e4e;
@@ -241,7 +372,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    cursor: pointer;
 }
 
 .breaking-news-img {
@@ -276,6 +406,7 @@ body {
     border-bottom: 1px solid #edeeee;
     text-decoration: none;
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
 .post-name {
