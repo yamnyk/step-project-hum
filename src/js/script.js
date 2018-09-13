@@ -28,7 +28,6 @@
 
     function imazinNavbarClick() {
         $('.portfolio_filter').click(function () {
-            $('.portfolio_gallery').css({'height': 'auto'});
             showPhoto();
             let itemList;
             switch ($(this).attr('id')) {
@@ -45,9 +44,13 @@
                     itemList = $('.landing-foto')
                     break;
                 case 'wordpress':
-                    hidePhoto('wordpress-foto')
-                    itemList = $('.wordpress-foto')
-                    break;
+                hidePhoto('wordpress-foto')
+                itemList = $('.wordpress-foto')
+                break;
+                default:
+                showPhoto();
+                itemList = $('.portfolio_gallery img')
+                break;
             }
 
             removeActiveClass();
