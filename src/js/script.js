@@ -28,3 +28,16 @@ $(".networks-button").click(function(e){
     $('.modal').removeClass('modal-win');
     $(".modal-overlay").removeClass('overlay-open');
 });
+/////////slider/////////////////
+$(".review-main-item").not(":first").hide();
+$('.navlist-img').click(function () {
+    $(".review-main-item").eq($('.navlist-img-active').index()).hide();
+    $('.navlist-img-active').removeClass('navlist-img-active');
+    $(this).addClass('navlist-img-active');
+    $(".review-main-item").eq($(this).index()).fadeIn()
+});
+
+$('#prev').click(function () {
+
+});
+

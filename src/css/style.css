@@ -275,41 +275,69 @@ body {
 
 .bg-blue {
     background-color: #385899;
+    transition: background-color 0.3s ease-in-out;
 }
 
+.bg-blue:hover {
+    background-color: #324e89;
+    transition: background-color 0.3s ease-in-out;
+}
 .bg-light-blue {
     background-color: #43b1e4;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.bg-light-blue:hover {
+    background-color: #3ea3d2;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .bg-red {
     background-color: #df4b31;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.fb-icon {
-    width: 60px;
-    height: 50px;
-    font-size: 30px;
-    line-height: 50px;
-    background-color: #324e89;
-    border-radius: 3px;
-}
-
-.twitter-icon {
-    width: 60px;
-    height: 50px;
-    font-size: 30px;
-    line-height: 50px;
-    background-color: #3ea3d2;
-    border-radius: 3px;
-}
-
-.google-icon{
-    width: 60px;
-    height: 50px;
-    font-size: 30px;
-    line-height: 50px;
+.bg-red:hover {
     background-color: #cf3c21;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.networks-icon {
+    width: 60px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 55px;
     border-radius: 3px;
+}
+
+.fb-bg {
+    background-color: #324e89;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.networks-button:hover .fb-bg{
+    background-color: #385899;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.twitter-bg {
+    background-color: #3ea3d2;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.networks-button:hover .twitter-bg{
+    background-color: #43b1e4;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.google-bg{
+    background-color: #cf3c21;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.networks-button:hover .google-bg {
+    background-color: #df4b31;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .networks-text {
@@ -344,6 +372,12 @@ body {
     padding: 0;
     border: none;
     border-radius: 3px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.form-button:hover {
+    background-color: #099178;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .form-footer {
@@ -434,10 +468,10 @@ body {
     margin: 0 10px 0 -5px;
 }
 
-.what-they-say {
+.review {
     background: linear-gradient( rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0.8) ), url('../img/Sections background/section-3.jpg') center fixed;
     background-size: cover;
-    height: 850px;
+    height: 750px;
     position: relative;
 }
 
@@ -445,14 +479,26 @@ body {
     color: #fff;
 }
 
-.what-they-say-opinion {
+.review-main-ul {
+    margin-bottom: 60px;
+}
+
+.review-main-item {
+    display: block;
+}
+
+.review-main-item-text {
+    margin-bottom: 35px;
+}
+
+.review-description {
     color: #bbb;
     font-size: 16px;
     font-weight: 300;
     margin: 40px 0;
 }
 
-.what-they-say-name {
+.review-name {
     text-transform: uppercase;
     color: #18cfab;
     font-size: 16px;
@@ -460,8 +506,69 @@ body {
     margin-bottom: 10px;
 }
 
-.what-they-say-position {
+.review-position {
     color: #bbb;
     font-size: 13px;
     font-weight: 300;
+}
+
+.review-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid #11d0ac;
+    box-shadow: 0 0 0 10px rgba(31, 218, 181, 0.2);
+}
+
+.active {
+    display: block;
+}
+
+.navlist-btn-prev {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.navlist-btn-next {
+    width: 30px;
+    height: 30px;
+    background-color: #11d0ac;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.review-img-navlist {
+    width: 480px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.review-navlist-area {
+    position: relative;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navlist-img {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(31, 218, 181, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.navlist-img-active {
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #11d0ac;
+    transform: translateY(-20px);
 }
