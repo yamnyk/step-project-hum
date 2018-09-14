@@ -48,7 +48,9 @@ $('#prev').click(function () {
 
 $('#next').click(function () {
     let currentIndex = $('.navlist-img-active').index();
+
     $(".review-main-item").eq(currentIndex).hide();
+    currentIndex = currentIndex === $('.navlist-img').length-1 ? -1 : $('.navlist-img-active').index();
     $('.navlist-img-active').removeClass('navlist-img-active');
     $('.navlist-img').eq(currentIndex+1).addClass('navlist-img-active');
     $(".review-main-item").eq(currentIndex+1).fadeIn();
