@@ -31,13 +31,26 @@ $(".networks-button").click(function(e){
 /////////slider/////////////////
 $(".review-main-item").not(":first").hide();
 $('.navlist-img').click(function () {
-    $(".review-main-item").eq($('.navlist-img-active').index()).hide();
+    let currentIndex = $('.navlist-img-active').index();
+    $(".review-main-item").eq(currentIndex).hide();
     $('.navlist-img-active').removeClass('navlist-img-active');
     $(this).addClass('navlist-img-active');
     $(".review-main-item").eq($(this).index()).fadeIn()
 });
 
 $('#prev').click(function () {
+    let currentIndex = $('.navlist-img-active').index();
+    $(".review-main-item").eq(currentIndex).hide();
+    $('.navlist-img-active').removeClass('navlist-img-active');
+    $('.navlist-img').eq(currentIndex-1).addClass('navlist-img-active');
+    $(".review-main-item").eq(currentIndex-1).fadeIn();
+});
 
+$('#next').click(function () {
+    let currentIndex = $('.navlist-img-active').index();
+    $(".review-main-item").eq(currentIndex).hide();
+    $('.navlist-img-active').removeClass('navlist-img-active');
+    $('.navlist-img').eq(currentIndex+1).addClass('navlist-img-active');
+    $(".review-main-item").eq(currentIndex+1).fadeIn();
 });
 

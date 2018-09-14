@@ -548,6 +548,7 @@ body {
 .review-img-navlist {
     width: 480px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin: 0 auto;
 }
@@ -572,6 +573,6 @@ body {
 .navlist-img-active {
     transition: all 0.3s ease-in-out;
     border: 2px solid #11d0ac;
-    box-shadow: 0 0 0 7px rgba(31, 218, 181, 0.2);
+    box-shadow: 0 0 0 5px rgba(31, 218, 181, 0.2);
     transform: translateY(-20px);
 }
