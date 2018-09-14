@@ -5,7 +5,7 @@
         masonryButton();
         navbarScroll();
         imazinNavbarClick();
-    })
+
 ////////////////TABS//////////////
 $(".services-tab-item").not(":first").hide();
 $(".services-tab-link").click(function() {
@@ -49,26 +49,7 @@ $('#prev').click(function () {
 
 });
 
-
-    function photoList() {
-        return $('.portfolio_gallery img');
-        
-    }
-    
-    function hidePhoto(name) {
-        for (let i = 0; i < photoList().length; i++) {
-            if ($(photoList()[i]).attr('class') != name) {
-                $(photoList()[i]).css('display', 'none')
-            }
-        } 
-    }
-
-    function showPhoto() {
-        for (let i = 0; i < photoList().length; i++) {
-                $(photoList()[i]).css('display', 'block')
-            }
-    }
-
+           ////////////////Batton for portfolio block//////////////
     function imazinNavbarClick() {
         $('.portfolio_filter').click(function () {
             showPhoto();
@@ -103,7 +84,7 @@ $('#prev').click(function () {
             butonClick(itemList);
         })
     }
-
+////////////////Batton for Masonry block//////////////
     function butonClick(photolist) {
         let count = 0;
         let height = $('.portfolio_gallery').height();
@@ -126,6 +107,8 @@ $('#prev').click(function () {
         })
     }
 
+        ////////////////Navbar Scroll//////////////
+
     function navbarScroll() {
         $('.navbar_item_link').click(function (e) {
             e.preventDefault();
@@ -134,7 +117,7 @@ $('#prev').click(function () {
             $('html, body').animate({scrollTop: pos}, 1500)
         })
     }
-
+        ////////////////Masonry//////////////
     function masonry() {
     $('.best_images_gallery').imagesLoaded(function () {
         $('.best_images_gallery').masonry({
@@ -173,7 +156,7 @@ $('#prev').click(function () {
             }, 2000)
         })
     }
-
+        ////////////////Animation//////////////
     function loadAnimation(button) {
         $('.anime-container').css('display', 'block');
         $(button).css('opacity', '100%');
@@ -184,9 +167,31 @@ $('#prev').click(function () {
         $(button).css('display', 'inline-block');
     }
 
+        ////////////////Added Functions//////////////
     function removeActiveClass() {
         let selectors = $('.portfolio_filter');
         for (let i = 0; i < selectors.length; i++ ) {
             $(selectors[i]).removeClass('portfolio_active')
+        }
+    }
+
+    })
+
+    function photoList() {
+        return $('.portfolio_gallery img');
+
+    }
+
+    function hidePhoto(name) {
+        for (let i = 0; i < photoList().length; i++) {
+            if ($(photoList()[i]).attr('class') != name) {
+                $(photoList()[i]).css('display', 'none')
+            }
+        }
+    }
+
+    function showPhoto() {
+        for (let i = 0; i < photoList().length; i++) {
+            $(photoList()[i]).css('display', 'block')
         }
     }
