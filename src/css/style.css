@@ -1079,6 +1079,7 @@ body {
 .review-img-navlist {
     width: 480px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin: 0 auto;
 }
