@@ -17,7 +17,7 @@ $('ham-button').click(function (event) {
     $('')
 });
 ///////////MODAL/////////////////
-$("#btn-mdl").click(function(e){
+$(".btn-mdl").click(function(e){
     $('.modal').addClass('modal-win');
     $(".modal-overlay").addClass('overlay-open');
 });
@@ -95,7 +95,6 @@ $('#prev').click(function () {
                 itemList = $('.portfolio_gallery img')
                 break;
             }
-
             removeActiveClass();
             $(this).addClass('portfolio_active');
             $('.portfolio_category_title').text($(this).text())
@@ -190,3 +189,4 @@ $('#prev').click(function () {
             $(selectors[i]).removeClass('portfolio_active')
         }
     }
+

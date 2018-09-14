@@ -22,25 +22,13 @@ body {
     margin: 20px 0;
 }
 
-.section-title {
-    color:  #4e4e4e;
-    font-size: 30px;
-    font-weight: 400;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 78px;
-    height: 1px;
-    background-color: #18cfab;
-    margin: 30px auto 70px;
-    box-shadow: 10px 4px 0px 0px #18cfab;
-}
-
 .head_navbar {
     background-color:  rgba(73, 71, 63, 0.6);
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0;
 }
 
 .navbar-container {
@@ -52,7 +40,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 32px 0;
 }
 
 .navbar {
@@ -138,8 +125,7 @@ body {
 }
 
 .logo_name {
-    position: relative;
-    left: 75%;
+    margin-left:65px;
     display: block;
 }
 
@@ -239,7 +225,6 @@ body {
 .portfolio {
     background-color: rgb(248, 252, 254);
     text-align: center;
-    padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -254,22 +239,12 @@ body {
     display: flex;
     list-style: none;
 }
-body {
-    font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
-}
-
-.container {
-    width: 1160px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
 
 .center {
     text-align: center;
 }
 
-.section-head-standart{
+.section-title{
     color:  #4e4e4e;
     font-size: 30px;
     font-weight: 400;
@@ -277,7 +252,7 @@ body {
     padding-top: 45px;
 }
 
-.section-head-standart:after {
+.section-title:after {
     content: '';
     display: block;
     width: 78px;
@@ -772,7 +747,6 @@ body {
 .best-images {
     background-color: rgb(248, 252, 254);
     text-align: center;
-    padding-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
