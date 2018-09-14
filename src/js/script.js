@@ -5,7 +5,7 @@
         masonryButton();
         navbarScroll();
         imazinNavbarClick();
-    })
+
 ////////////////TABS//////////////
 $(".services-tab-item").not(":first").hide();
 $(".services-tab-link").click(function() {
@@ -49,26 +49,7 @@ $('#prev').click(function () {
 
 });
 
-
-    function photoList() {
-        return $('.portfolio_gallery img');
-        
-    }
-    
-    function hidePhoto(name) {
-        for (let i = 0; i < photoList().length; i++) {
-            if ($(photoList()[i]).attr('class') != name) {
-                $(photoList()[i]).css('display', 'none')
-            }
-        } 
-    }
-
-    function showPhoto() {
-        for (let i = 0; i < photoList().length; i++) {
-                $(photoList()[i]).css('display', 'block')
-            }
-    }
-
+    /////////Imazing menu click/////////////////
     function imazinNavbarClick() {
         $('.portfolio_filter').click(function () {
             showPhoto();
@@ -97,21 +78,22 @@ $('#prev').click(function () {
             }
             removeActiveClass();
             $(this).addClass('portfolio_active');
+            count = 0;
             $('.portfolio_category_title').text($(this).text())
-
-            butonClick(itemList);
+            $('.portfolio_gallery').css({'height': `618px`});
+            $('#portfolio_load_batton').css('display', 'inline-block')
         })
     }
 
-    function butonClick(photolist) {
-        let count = 0;
-        let height = $('.portfolio_gallery').height();
+    /////////Button for best photo block/////////////////
+
+    function butonClick() {
 
         $('#portfolio_load_batton').click(function () {
             loadAnimation('#imazing-photo-button');
             setTimeout(function () {
                 stopAnimation('#imazing-photo-button');
-                if (photolist.length >= 24 + count*12) {
+                if (coutOfPhotos() >= 24 + count*12) {
                     $('.portfolio_gallery').css({'height': `${height + height*(count+1)}`});
                 } else {
                     $('.portfolio_gallery').css({'height': `auto`});
@@ -119,11 +101,12 @@ $('#prev').click(function () {
                 count++;
                 if (count == 2) {
                     $('#portfolio_load_batton').css('display', 'none')
-                    $('.portfolio_gallery').css({'margin-bottom': '100px'})
                 }
             }, 2000)
         })
     }
+
+    /////////Scroll/////////////////
 
     function navbarScroll() {
         $('.navbar_item_link').click(function (e) {
@@ -134,6 +117,7 @@ $('#prev').click(function () {
         })
     }
 
+    /////////Masonry/////////////////
     function masonry() {
     $('.best_images_gallery').imagesLoaded(function () {
         $('.best_images_gallery').masonry({
@@ -173,6 +157,7 @@ $('#prev').click(function () {
         })
     }
 
+    /////////Animation/////////////////
     function loadAnimation(button) {
         $('.anime-container').css('display', 'block');
         $(button).css('opacity', '100%');
@@ -183,6 +168,8 @@ $('#prev').click(function () {
         $(button).css('display', 'inline-block');
     }
 
+    /////////Helped Functions/////////////////
+
     function removeActiveClass() {
         let selectors = $('.portfolio_filter');
         for (let i = 0; i < selectors.length; i++ ) {
@@ -190,3 +177,36 @@ $('#prev').click(function () {
         }
     }
 
+    let count = 0;
+    let height = $('.portfolio_gallery').height();
+
+    function photoList() {
+        return $('.portfolio_gallery img');
+    }
+
+    function coutOfPhotos() {
+        let quantity = 0;
+        for (let i = 0; i < photoList().length; i++) {
+            if ($(photoList()[i]).css('display') != 'none') {
+                quantity++;
+            }
+        }
+
+        return quantity;
+    }
+
+    function hidePhoto(name) {
+        for (let i = 0; i < photoList().length; i++) {
+            if ($(photoList()[i]).attr('class') != name) {
+                $(photoList()[i]).css('display', 'none')
+            }
+        }
+    }
+
+    function showPhoto() {
+        for (let i = 0; i < photoList().length; i++) {
+            $(photoList()[i]).css('display', 'block')
+        }
+    }
+
+})
