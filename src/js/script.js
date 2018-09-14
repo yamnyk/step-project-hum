@@ -80,7 +80,7 @@ $('#prev').click(function () {
             $(this).addClass('portfolio_active');
             count = 0;
             $('.portfolio_category_title').text($(this).text())
-            $('.portfolio_gallery').css({'height': `618px`});
+            $('.portfolio_gallery').css({'height': `${height}`});
             $('#portfolio_load_batton').css('display', 'inline-block')
         })
     }
