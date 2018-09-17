@@ -1048,6 +1048,7 @@ body {
 }
 
 .navlist-btn {
+    cursor: pointer;
     width: 30px;
     height: 30px;
     border: 1px solid white;
