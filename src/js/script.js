@@ -37,17 +37,32 @@ $(document).ready(function () {
         $(".modal-overlay").removeClass('overlay-open');
     });
 /////////slider/////////////////
-$(".review-main-item").not(":first").hide();
-$('.navlist-img').click(function () {
-    $(".review-main-item").eq($('.navlist-img-active').index()).hide();
-    $('.navlist-img-active').removeClass('navlist-img-active');
-    $(this).addClass('navlist-img-active');
-    $(".review-main-item").eq($(this).index()).fadeIn()
-});
+    $(".review-main-item").not(":first").hide();
+    $('.navlist-img').click(function () {
+        let currentIndex = $('.navlist-img-active').index();
+        $(".review-main-item").eq(currentIndex).hide();
+        $('.navlist-img-active').removeClass('navlist-img-active');
+        $(this).addClass('navlist-img-active');
+        $(".review-main-item").eq($(this).index()).fadeIn()
+    });
 
-$('#prev').click(function () {
+    $('#prev').click(function () {
+        let currentIndex = $('.navlist-img-active').index();
+        $(".review-main-item").eq(currentIndex).hide();
+        $('.navlist-img-active').removeClass('navlist-img-active');
+        $('.navlist-img').eq(currentIndex-1).addClass('navlist-img-active');
+        $(".review-main-item").eq(currentIndex-1).fadeIn();
+    });
 
-});
+    $('#next').click(function () {
+        let currentIndex = $('.navlist-img-active').index();
+
+        $(".review-main-item").eq(currentIndex).hide();
+        currentIndex = currentIndex === $('.navlist-img').length-1 ? -1 : $('.navlist-img-active').index();
+        $('.navlist-img-active').removeClass('navlist-img-active');
+        $('.navlist-img').eq(currentIndex+1).addClass('navlist-img-active');
+        $(".review-main-item").eq(currentIndex+1).fadeIn();
+    });
 
     /////////Imazing menu click/////////////////
     function imazinNavbarClick() {
