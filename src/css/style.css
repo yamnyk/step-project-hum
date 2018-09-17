@@ -361,10 +361,6 @@ body {
     margin-bottom: 70px;
 }
 
-.modal {
-    display: none;
-}
-
 .modal-overlay {
     position: fixed;
     z-index: 9999;
@@ -373,10 +369,6 @@ body {
     right: 0;
     bottom: 0;
     background-color: rgba(20,20,20,0.8);
-    display: none;
-}
-
-.overlay-open {
     display: block;
 }
 
@@ -401,7 +393,6 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-    /*margin-left: 40px;*/
 }
 
 .form-head {
