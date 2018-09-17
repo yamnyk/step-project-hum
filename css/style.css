@@ -1047,7 +1047,7 @@ body {
     display: block;
 }
 
-.navlist-btn-prev {
+.navlist-btn {
     width: 30px;
     height: 30px;
     border: 1px solid white;
@@ -1055,16 +1055,12 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.navlist-btn-next {
-    width: 30px;
-    height: 30px;
+.navlist-btn:hover {
     background-color: #11d0ac;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .review-img-navlist {
